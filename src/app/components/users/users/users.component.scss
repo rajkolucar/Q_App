@@ -1,0 +1,15 @@
+@import "../../../../assets/scss/styles.scss";
+
+.user-data {
+  background-color: #898989;
+  margin-left: 11px;
+  line-height: 19px;
+  font-size: 14px;
+  padding-left: 6px;
+  border-radius: 11px;
+  margin-top: 10px;
+
+  span {
+    display: block;
+  }
+}

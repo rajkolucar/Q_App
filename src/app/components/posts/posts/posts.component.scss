@@ -1,0 +1,15 @@
+@import "../../../../assets/scss/styles.scss";
+
+.buttons-container {
+  padding: 10px;
+
+  .comments-button {
+    margin-right: 20px;
+    background-color: #a1de46;
+
+  }
+
+  .details-button {
+    background-color: #5462d0;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="posts">
+  <input type="text" [(ngModel)]="searchText" placeholder="Search..." />
+
+  <ul>
+    <li *ngFor="let item of items | filter : searchText">
+      <span class="title"> {{ item.title }} </span>
+      <span> Post id: {{ item.id }} </span>
+      <span class="body"> {{ item.body }} </span>
+
+      <app-users [userId]="item.userId" (userData)="item.user = $event"></app-users>
+      <div class="buttons-container">
+        <button class="comments-button" (click)="showComments(item.id)">
+          <span *ngIf="!this.expandComments[item.id];else else_content"> Show comments </span>
+          <ng-template #else_content> Hide comments </ng-template>
+        </button>
+
+        <button class="details-button" (click)="postDetails(item.id)"> See details </button>
+      </div>
+
+      <app-comments [postId]="item.id" *ngIf="expandComments[item.id]"></app-comments>
+      <hr/>
+    </li>
+  </ul>
+</div>

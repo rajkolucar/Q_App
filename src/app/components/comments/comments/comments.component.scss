@@ -1,0 +1,18 @@
+@import "../../../../assets/scss/styles.scss";
+
+.comments-container {
+  padding-left: 15px;
+
+  .name {
+    display: block;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .content {
+    display: block;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 16px;
+  }
+}

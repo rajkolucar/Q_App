@@ -1,0 +1,17 @@
+<div class="post">
+  <button class="back-button" [routerLink]="'/posts'"> Back to posts </button>
+  <ul>
+    <li>
+      <span class="title"> {{ item.title }} </span>
+      <span> Post id: {{ item.id }}, </span>
+      <span> User id: {{ item.userId }} </span>
+      <span class="body"> {{ item.body }} </span>
+
+      <div *ngIf="loaded">
+        <app-users [userId]="item.userId"></app-users>
+        <app-comments [postId]="item.id"></app-comments>
+      </div>
+      <hr/>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+<div class="user-data" *ngIf="user">
+  <span> Username: {{ user.username }} </span>
+  <span> User: {{ user.name }} </span>
+  <span> Email: {{ user.email }} </span>
+  <span> Street: {{ user.address.street }} </span>
+  <span> Suite: {{ user.address.suite }} </span>
+  <span> City: {{ user.address.city }} </span>
+  <span> Zipcode: {{ user.address.zipcode }} </span>
+  <span> Geo:
+    <span class="pl10"> Latitude: {{ user.address.geo.lat }} </span>
+    <span class="pl10"> Longitude: {{ user.address.geo.lng }} </span>
+  </span>
+  <span> Company:
+    <span class="pl10"> Name: {{ user.company.name }} </span>
+    <span class="pl10"> Bs: {{ user.company.bs }} </span>
+    <span class="pl10"> Catch phrase: {{ user.company.catchPhrase }} </span>
+  </span>
+</div>

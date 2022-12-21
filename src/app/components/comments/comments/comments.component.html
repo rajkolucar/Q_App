@@ -1,0 +1,10 @@
+<ul class="comments-container">
+  <li *ngFor="let comment of comments">
+    <span> Post id: {{ comment.postId }}, </span>
+    <span> Comment id: {{ comment.id }} </span>
+    <span class="name">
+      Name: {{ comment.name }} ({{ comment.email }})
+    </span>
+    <span class="content"> {{ comment.body }} </span>
+  </li>
+</ul>
